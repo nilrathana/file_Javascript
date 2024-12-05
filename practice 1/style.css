@@ -1,45 +1,77 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+  height: 100dvh;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.joke-container {
+  position: absolute;
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .counter {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #count {
-    font-size: 2em;
-    margin: 20px 0;
-    color: rgb(255, 0, 98);
+  font-size: 2em;
+  margin: 20px 0;
+  color: rgb(255, 0, 98);
 }
-h1{
-    color: #c31eec;
+#get-joke {
+  background-color: aliceblue;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #c31eec;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+#get-joke:hover {
+  background-color: rgb(57, 131, 221);
+  color: rgb(251, 251, 251);
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+#get-joke:active {
+  background-color: rgb(92, 68, 245);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightblue;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-button:hover {
-    background-color: #00f5f5;
+.loading {
+  background: limegreen;
+  color: white;
+}
+.loaded {
+  background: rgb(48, 149, 243);
+  color: white;
 }
